@@ -12,5 +12,4 @@
 class Note < ApplicationRecord
   belongs_to :creator, required: true, class_name: "User", foreign_key: "creator_id"
   belongs_to :document, required: true, class_name: "Document", foreign_key: "document_id"
-  validates :body, presence: true
 end

@@ -11,5 +11,4 @@
 #
 class Document < ApplicationRecord
   has_many  :notes, class_name: "Note", foreign_key: "document_id", dependent: :destroy
-  validates :title, presence: true
 end
