@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Document resource:
+
+  # CREATE
+  post("/insert_document", { :controller => "documents", :action => "create" })
+          
+  # READ
+  get("/documents", { :controller => "documents", :action => "index" })
+  
+  get("/documents/:path_id", { :controller => "documents", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_document/:path_id", { :controller => "documents", :action => "update" })
+  
+  # DELETE
+  get("/delete_document/:path_id", { :controller => "documents", :action => "destroy" })
+
+  #------------------------------
+
   # Routes for the Note resource:
   root "notes#index"
   # CREATE
